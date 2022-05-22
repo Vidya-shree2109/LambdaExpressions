@@ -68,5 +68,14 @@ namespace LambdaExpressions
             Console.WriteLine("Skipping The Record From The List For Age < 60 :\n");
             Display(Result);
         }
+        public void RemoveRecords()
+        {
+            Person result = this.personList.Find(x => x.Name == "Neha");
+            Console.WriteLine("\n");
+            Console.WriteLine("Removing Specific Name In The List :\n");
+            this.personList.Remove(result);
+            Console.WriteLine("Removed NEHA\n");
+            Display(this.personList);
+        }
     }
 }
