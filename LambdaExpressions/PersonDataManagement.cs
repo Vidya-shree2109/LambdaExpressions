@@ -15,7 +15,7 @@ namespace LambdaExpressions
             personList.Add(new Person { SSN = 2, Name = "Neha", Address = "Tumkur", Age = 25 });
             personList.Add(new Person { SSN = 3, Name = "Siri", Address = "Mysore", Age = 35 });
             personList.Add(new Person { SSN = 4, Name = "Rakesh", Address = "Bangalore", Age = 27 });
-            personList.Add(new Person { SSN = 5, Name = "Pradeep", Address = "Mangalore", Age = 46 });
+            personList.Add(new Person { SSN = 5, Name = "Pradeep", Address = "Mangalore", Age = 75 });
             Display(personList);
         }
         public void Display(IEnumerable<Person> list)
@@ -24,6 +24,13 @@ namespace LambdaExpressions
             {
                 Console.WriteLine("SSN : " + person.SSN + "\t" + "Name : " + person.Name + "\t" + "Address : " + person.Address + "\t" + "Age : " + person.Age);
             }
+        }
+        public void GetTopRecords()
+        {
+            var Result = this.personList.Where(x => x.Age < 60).Take(2);
+            Console.WriteLine("\n");
+            Console.WriteLine("Retreiving Top Two Records\n");
+            Display(Result);
         }
     }
 }

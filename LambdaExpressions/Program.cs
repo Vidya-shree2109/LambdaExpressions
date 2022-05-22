@@ -10,6 +10,7 @@ namespace LambdaExpressions
             Console.WriteLine("\t\t\t\t\t-----------------------------------------\t\t\t\t\t");
             PersonDataManagement data = new PersonDataManagement();
             data.AddDefaultData();
+            data.GetTopRecords();
         }
     }
 }
