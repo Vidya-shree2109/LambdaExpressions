@@ -41,5 +41,12 @@ namespace LambdaExpressions
             Console.WriteLine("Retreiving All The Records Between Age 13 - 18 :\n");
             Display(result);
         }
+        public void AverageRecords()
+        {
+            var result = this.personList.Average(x => x.Age);
+            Console.WriteLine("\n");
+            Console.WriteLine("Retreiving Average Age From The List :\n");
+            Console.WriteLine("Average Age : " + result);
+        }
     }
 }
